@@ -64,25 +64,33 @@ theme: beige
 
 ## Commenting
 
-<iframe src="https://repl.it/I6dF/1" height="540" />
+> Add notes/documentation to your code
+
+<iframe src="https://repl.it/I6dF/1" width="1280" height="540"  />
 
 ---
 
 ## Declaring Variables
 
-<iframe src="https://repl.it/I6dF/2" height="540" />
+> Store data that can be resued later in your program
+
+<iframe src="https://repl.it/I6dF/2" width="1280" height="540"  />
 
 ---
 
 ## Assignment Operator
 
-<iframe src="https://repl.it/I6dU" height="540" />
+> Assign values to variables
+
+<iframe src="https://repl.it/I6dU" width="1280" height="540"  />
 
 ---
 
 ## Case Sensitive Names
 
-<iframe src="https://repl.it/I6d3" height="540" />
+> firstName != FirstName
+
+<iframe src="https://repl.it/I6d3" width="1280" height="540"  />
 
 ---
 
@@ -102,19 +110,40 @@ kebab-case (first-name, last-name, day-of-week)
 
 ## Addition
 
-<iframe src="https://repl.it/I6d6" height="540" />
+> Use the + operator against two operands.
+
+<iframe src="https://repl.it/I6d6" width="1280" height="540"  />
+
+---
+
+## Expressions
+
+- You've learned about two kinds of expressions:
+
+```
+// Assignment expression
+var x = 10;
+var y = 15;
+
+// Addition expression
+var total = x + y + 8; // 33
+```
 
 ---
 
 ## Managing Variables
 
-<iframe src="https://repl.it/I6d9" height="540" />
+> Often we need to change the value of variables.
+
+<iframe src="https://repl.it/I6d9" width="1280" height="540"  />
 
 ---
 
 ## Compound Assignment
 
-<iframe src="https://repl.it/I6dk" height="540" />
+> Increase/decrease the value stored in a variable by a certain amount.
+
+<iframe src="https://repl.it/I6dk" width="1280" height="540"  />
 
 ---
 
@@ -122,7 +151,7 @@ kebab-case (first-name, last-name, day-of-week)
 
 Arithmetic operations are always evaluated in a specific order, called the order of operations. 
 
-The PEMDAS acronym is an easy way to remember the order of operations for almost all programming languages:
+The PEMDAS acronym is an easy way to remember the order of operations for almost all programming languages.
 
 ---
 
@@ -143,7 +172,7 @@ The PEMDAS acronym is an easy way to remember the order of operations for almost
 
 https://rebrand.ly/node100
 
-- If you finish early, checkout YDKJS
+- If you finish early, read first two chapters of You Don't Know JavaScript by Kyle Simpson (Free on GitHub)
 
 ---
 
@@ -156,6 +185,200 @@ https://rebrand.ly/node100
 - Functions
 - Objects
 - Loops
+
+---
+
+### Values & Types
+
+- Numbers
+- Strings
+- Arrays
+- Functions
+- Booleans
+- Null & Undefined
+
+---
+
+## Numbers
+
+> Humans use Base 10, Computers use Base 2/8/16
+
+<table>
+    <thead>
+        <tr>
+            <th>Base #</th>
+            <th>Numbers</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Base 10</td>
+            <td>
+                1<br />
+                2<br />
+                3<br />
+                10<br />
+                20<br />
+                30<br />
+            </td>
+        </tr>
+        <tr>
+            <td>Base 2 (Binary)</td>
+            <td>
+                0b000001<br />
+                0b000010<br />
+                0b000011<br />
+                0b001010<br />
+                0b010100<br />
+                0b011110
+            </td>
+        </tr>
+            <tr>
+            <td>Base 16 (Binary)</td>
+            <td>
+                0x000001<br />
+                0x000002<br />
+                0x000003<br />
+                0x0000a0<br />
+                0x000014<br />
+                0x00001e
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+## Numbers
+
+<iframe src="https://repl.it/languages/javascript" width="1280" height="540" />
+
+---
+
+## Strings
+
+> Strings are alphanumerical characters surrounded by either single or double quotes.
+
+<iframe src="https://repl.it/I7Er" width="1280" height="540" />
+
+---
+
+## Strings: Escape Sequences
+
+> Watch out for special characters!
+
+<iframe src="https://repl.it/I7FC" width="1280" height="540" />
+
+---
+
+## Strings: Concatenation
+
+> Adding two strings together
+
+<iframe src="https://repl.it/languages/javascript" width="1280" height="540" />
+
+---
+
+## Strings: Length
+
+> Find out how many characters make up a string
+
+<iframe src="https://repl.it/languages/javascript" width="1280" height="540" />
+
+---
+
+## Strings: Bracket Notation
+
+- Strings are indexed in most programming languages.
+
+- We can access individual characters in a string using bracket notation
+
+- In bracket notation, we provide the index of the character we'd like to pull out.
+
+```
+'Hello!'
+ ^^^^^^
+ ||||||
+ 012345
+```
+
+---
+
+## Strings: Bracket Notation
+
+<iframe src="https://repl.it/languages/javascript" width="1280" height="540" />
+
+---
+
+## Arrays
+
+> Arrays are a way to store a list of variables in JavaScript. 
+
+<iframe src="https://repl.it/I7FC/1" width="1280" height="540" />
+
+---
+
+## Functions
+
+- A function is a reusable block of code.
+
+- The function keyword.
+
+- The function name.
+
+- The function parameters
+
+- The block of code.
+
+---
+
+## Functions
+
+<iframe src="https://repl.it/languages/javascript" width="1280" height="540" /> 
+
+---
+
+## Booleans
+
+<iframe width="1280" height="540" src="https://www.youtube.com/embed/nyOepG93wSI" frameborder="0" allowfullscreen></iframe>
+
+---
+
+## Booleans
+
+> A boolean can hold one of two possible values: True or false.
+
+```js
+var isLightbulbOn = true;
+
+isLightbulbOn = false;
+isLightbulbOn = true;
+isLightbulbOn = false;
+isLightbulbOn = true;
+```
+
+---
+
+## Null & Undefined
+
+> There are two main value types to represent an empty value.
+
+- Null: This variable is empty for a reason.
+- Undefined: This variable is empty due to an absence of definition.
+
+---
+
+## Null & Undefined
+
+<iframe src="https://repl.it/languages/javascript" width="1280" height="540" />
+
+---
+
+## Code Exercises
+
+30 minutes - complete the next 10 exercises in the repl.it classroom (Everything prefixed with `Types`)
+
+https://rebrand.ly/node100
 
 ---
 
@@ -204,3 +427,5 @@ https://rebrand.ly/node100
 - **Functions**
 - **Objects**
 - **Loops**
+
+---
