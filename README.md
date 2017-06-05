@@ -1,4 +1,4 @@
-# Cohort 10
+# Cohort 12
 
 ## Welcome to Origin Code Academy
 
