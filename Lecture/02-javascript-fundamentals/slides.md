@@ -14,7 +14,7 @@ theme: beige
 - Statements and Expressions
 - Values & Types
 - Operators & Conditionals
-- Functions
+- Functions and Scope
 - Objects
 - Loops
 
@@ -42,7 +42,7 @@ theme: beige
 - **Statements and Expressions**
 - Values & Types
 - Operators & Conditionals
-- Functions
+- Functions and Scope
 - Objects
 - Loops
 
@@ -182,7 +182,7 @@ https://rebrand.ly/node100
 - **Statements and Expressions**
 - **Values & Types**
 - Operators & Conditionals
-- Functions
+- Functions and Scope
 - Objects
 - Loops
 
@@ -193,7 +193,7 @@ https://rebrand.ly/node100
 - Numbers
 - Strings
 - Arrays
-- Functions
+- Functions and Scope
 - Booleans
 - Null & Undefined
 
@@ -204,16 +204,10 @@ https://rebrand.ly/node100
 > Humans use Base 10, Computers use Base 2/8/16
 
 <table>
-    <thead>
-        <tr>
-            <th>Base #</th>
-            <th>Numbers</th>
-        </tr>
-    </thead>
     <tbody>
         <tr>
-            <td>Base 10</td>
             <td>
+                <strong>Base 10</strong><br />
                 1<br />
                 2<br />
                 3<br />
@@ -221,10 +215,8 @@ https://rebrand.ly/node100
                 20<br />
                 30<br />
             </td>
-        </tr>
-        <tr>
-            <td>Base 2 (Binary)</td>
             <td>
+                <strong>Base 2 (Binary)</strong><br />
                 0b000001<br />
                 0b000010<br />
                 0b000011<br />
@@ -232,10 +224,8 @@ https://rebrand.ly/node100
                 0b010100<br />
                 0b011110
             </td>
-        </tr>
-            <tr>
-            <td>Base 16 (Binary)</td>
             <td>
+                <strong>Base 16 (Binary)</strong><br />
                 0x000001<br />
                 0x000002<br />
                 0x000003<br />
@@ -388,9 +378,85 @@ https://rebrand.ly/node100
 - **Statements and Expressions**
 - **Values & Types**
 - **Operators & Conditionals**
-- Functions
+- Functions and Scope
 - Objects
 - Loops
+
+---
+
+### Operators & Conditionals
+
+- Comparison
+- Equality
+- Logical Operators
+- If Statements
+- Switch Statement
+
+---
+
+### Operators & Conditionals
+
+- Math operators compute numerical values.
+
+- Boolean operators compute boolean values.
+
+- We will now focus on Boolean computation - also known as *_Conditions_*.
+
+---
+
+### Comparison Operators
+
+<iframe src="https://repl.it/languages/javascript" width="1280" height="540" />
+
+--- 
+
+### Equality
+
+- Two types of equality
+
+- Loose Equality (`==`) checks if the values of two operands are equal.
+- Strict Equality (`===`) checks if the values and types of operands are equal.
+
+---
+
+### Equality
+
+<iframe src="https://repl.it/languages/javascript" width="1280" height="540" />
+
+---
+
+### Logical Operators
+
+- There are two logical operators: AND / OR.
+
+- AND (`&&`) checks if two booleans are TRUE
+- OR (`||`) checks if at least one boolean is TRUE.
+
+---
+
+### Logical Operators
+
+<iframe src="https://repl.it/languages/javascript" width="1280" height="540" />
+
+---
+
+### If Statements
+
+> If statements allow us to execute one of two blocks of code depending on the result of a boolean condition.
+
+<img src="https://s3-us-west-1.amazonaws.com/oca-start-now/curriculum/images/NODE100-IfElse.png" height="400" />
+
+---
+
+### If Statements
+
+<iframe src="https://repl.it/languages/javascript" height="540" width="1280" />
+
+---
+
+### Switch Statement
+
+<iframe src="https://repl.it/languages/javascript" height="540" width="1280" />
 
 ---
 
@@ -400,9 +466,176 @@ https://rebrand.ly/node100
 - **Statements and Expressions**
 - **Values & Types**
 - **Operators & Conditionals**
-- **Functions**
+- **Functions and Scope**
 - Objects
 - Loops
+
+---
+
+### Functions and Scope
+
+- Defining functions
+- Invoking functions
+- Function parameters
+- Scope
+
+---
+
+### Defining Functions
+
+> Functions allow you to create a block of code that can be called at any time.
+
+```js
+function sayHello() {
+    console.log('Hello');
+}
+```
+
+---
+
+### Invoking Functions
+
+> Invoking a function is telling JavaScript to run the code block associated with that function.
+
+```js
+// Function definition
+function sayHello() {
+    console.log('Hello');
+}
+
+// Function invoke
+sayHello();
+```
+
+---
+
+### Function parameters
+
+> Parameters are values to be passed into a function.
+
+```js
+function addTwoNumbers(a, b) {
+    return a + b;
+}
+
+var x = addTwoNumbers(2, 2);
+var y = addTwoNumbers(5, 5);
+```
+
+---
+
+### Scope
+
+- Mo variables, Mo problems.
+
+- We need to start considering scope.
+
+---
+
+### Scope
+
+> In JavaScript, a scope is created anytime we define a new function.
+
+---
+
+### Scope
+
+> JavaScript will take an "inside-out" approach to find the value of a variable.
+
+<img src="https://s3-us-west-1.amazonaws.com/oca-start-now/curriculum/images/NODE100-functions-scope-1.png" height="300" />
+
+---
+
+### Scope
+
+<iframe src="https://repl.it/languages/javascript" height="540" width="1280" />
+
+---
+
+### Hoisting
+
+- JavaScript code for the most part is interpreted line-by-line as the program executes.
+
+```js
+var a = 1;
+
+var b = a + 2;
+
+console.log(b);
+```
+
+---
+
+### Hoisting
+
+- What happens with this code?
+
+```js   
+b();    
+
+function b() {
+    a = 2;
+}       
+
+var a;
+
+console.log(a);
+```
+
+---
+
+### Hoisting
+
+- Step 1: Move all functions to the top of the current scope
+
+```js
+function b() {
+    a = 2;
+}
+
+b();    
+
+var a;
+
+console.log(a);
+```
+
+---
+
+### Hoisting
+
+- Step 2: Move all variable declarations to the top of the current scope
+
+```js
+var a;
+
+function b() {
+    a = 2;
+}
+
+b();    
+
+console.log(a);
+```
+
+---
+
+### Hoisting
+
+- Hoisting is now complete
+
+<iframe src="https://repl.it/I89P" width="1280" height="540" />
+
+---
+
+### Exercises
+
+- In 20 minutes, complete the next 4 exercises
+
+- Functions: Defining
+- Functions: Invoking
+- Functions: Parameters
+- Functions: Scope
 
 ---
 
@@ -412,20 +645,263 @@ https://rebrand.ly/node100
 - **Statements and Expressions**
 - **Values & Types**
 - **Operators & Conditionals**
-- **Functions**
+- **Functions and Scope**
 - **Objects**
 - Loops
 
 ---
 
+### Objects
+
+- What are objects?
+- Creating objects
+- Object properties
+- Setting object properties
+- Getting object properties
+
+---
+
+### What are objects?
+
+> Objects are simply containers for JavaScript values.
+
+```js
+var school = {
+    name: 'Origin Code Academy',
+    city: 'San Diego'
+};
+```
+
+---
+
+### Creating Objects
+
+> You can create an object using the Object function, or more commonly with the object literal syntax
+
+```js
+var student = Object();   // The object function
+var car = {};             // An object literal
+```
+
+---
+
+### Object properties
+
+> A property is a value contained inside of an Object.
+
+```js
+var school = {
+    name: 'Origin Code Academy', // property
+    city: 'San Diego'            // property
+};
+```
+
+---
+
+### Getting object properties
+
+> You can read the properties of an object using bracket notation or dot notation.
+
+```js
+var car = {
+    make: 'Honda',
+    model: 'Civic',
+    year: 2017
+};
+
+car['make'];     // => Honda
+car.make;        // => Honda
+```
+
+---
+
+### Setting object properties
+
+> You can set the properties of an object using an assignment expression.
+
+```js
+var car = {
+    make: 'Honda',
+    model: 'Civic',
+    year: 2017
+};
+
+car['make'] = 'Ford';
+car.model = 'Focus'; 
+car.year = 2018;
+```
+
+---
+
+### Creating Objects
+
 ### Learning Objectives
 
 - **Introduction**
 - **Statements and Expressions**
 - **Values & Types**
 - **Operators & Conditionals**
-- **Functions**
+- **Functions and Scope**
 - **Objects**
 - **Loops**
 
 ---
+
+### Loops
+
+> Loops help us run a block of code multiple times as long as a condition is met.
+
+- While Loop
+- For Loop
+
+---
+
+### While Loop
+
+<img src="https://s3-us-west-1.amazonaws.com/oca-start-now/curriculum/images/NODE100-WhileLoop.png" height="540" />
+
+---
+
+### While Loop
+
+```js
+var count = 0;
+
+while(count < 5) {
+    console.log('Hello world!');
+    count += 1;
+}
+```
+
+---
+
+### For Loop
+
+<img src="https://s3-us-west-1.amazonaws.com/oca-start-now/curriculum/images/NODE100-ForLoop.png" height="540" />
+
+---
+
+### For Loop
+
+```js
+for(var i = 0; i < 5; i++) {
+    console.log('Hello world!');
+}
+```
+
+---
+
+### For Loop
+
+- Declaration component: `var i = 0;`
+- Conditional component: `i < 5;`
+- Post-iteration component: `i++`
+
+```js
+for(var i = 0; i < 10; i++) {
+    console.log(i);
+}
+```
+
+---
+
+### Exercises
+
+Spend 20 minutes on the final exercises of `NODE100`.
+
+---
+
+### Summary
+
+- Variables
+- Values & Types
+- Operators & Conditionals
+- Functions and Scope
+- Objects
+- Loops
+
+---
+
+## Q: What are the 6 main types in JavaScript?
+
+---
+
+## A: `Boolean`, `Null`, `Undefined`, `Number`, `String`, `Object`
+
+---
+
+## Q: What are 4 examples of compound assignment operators?
+
+---
+
+## A: `+=`, `-=`, `*=`, `/=`
+
+---
+
+## Q: What does use of the `/=` operator result in?
+
+---
+
+## A: A division of the LH value by the RH value
+
+```
+var x = 10;     // => 10
+x /= 2;         // => 5
+```
+
+---
+
+## Q: What are the 4 comparison operators?
+
+---
+
+## A: `<`, `<=`, `>`, `>=`
+
+---
+
+## Q: What is a function?
+
+---
+
+## A: A named block of reusable code
+
+---
+
+## Q: What will this code log?
+
+```js
+function log(message) {
+    console.log(message);
+}
+
+sayHello(name);
+
+var name = 'Jennifer';
+
+function sayHello(name) {
+    log('Hello ' + name);
+}
+```
+
+---
+
+## A: 'Hello Jennifer' - Remember hoisting
+
+---
+
+### Summary
+
+- Variables
+- Values & Types
+- Operators & Conditionals
+- Functions and Scope
+- Objects
+- Loops
+
+---
+
+## What's next?
+
+- Tomorrow we start using jQuery
+
+- Catch up on outstanding exercises
