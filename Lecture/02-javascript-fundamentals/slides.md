@@ -889,19 +889,10 @@ function sayHello(name) {
 
 ---
 
-### Summary
-
-- Variables
-- Values & Types
-- Operators & Conditionals
-- Functions and Scope
-- Objects
-- Loops
-
----
-
 ## What's next?
 
-- Tomorrow we start using jQuery
+> The rest of the day is purely devoted to coding. Tomorrow we will work on HTML/CSS
 
-- Catch up on outstanding exercises
+- Review Prework
+- Complete Repl.it exercises
+- Challenge yourself with CodeWars
