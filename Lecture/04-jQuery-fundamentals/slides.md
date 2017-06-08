@@ -133,7 +133,7 @@ $('div#ancestor div.descendant');
 
 ### Descendant Selectors
 
-<iframe src="https://codepen.io/pen?template=XgmGeQ" width="1280" height="540" />
+<iframe src="https://codepen.io/pen?template=XgmGeQ?" width="1280" height="540" />
 
 ----
 
@@ -149,7 +149,7 @@ $('ul > li');
 
 ### Child Selector
 
-<iframe src="https://codepen.io/pen?template=XgmGeQ" width="1280" height="540" />
+<iframe src="https://codepen.io/pen?template=XgmGeQ?editors=1010" width="1280" height="540" />
 
 ----
 
@@ -165,7 +165,7 @@ $('li#foo + li#bar');
 
 ### Sibling Selector
 
-<iframe src="https://codepen.io/pen?template=XgmGeQ" width="1280" height="540" />
+<iframe src="https://codepen.io/pen?template=XgmGeQ&editors=1010" width="1280" height="540" />
 
 ----
 
@@ -188,7 +188,7 @@ $('ul > li:last-child');
 
 ### Selection Filters
 
-<iframe src="https://codepen.io/pen?template=xrwezr" width="1280" height="540" />
+<iframe src="https://codepen.io/pen?template=xrwezr&editors=1010" width="1280" height="540" />
 
 ----
 
@@ -208,7 +208,7 @@ $('input[name*=mail]');         // Get inputs where name contains mail
 
 ### Attribute Filters
 
-<iframe src="https://codepen.io/pen?template=awvMgv" height="540" width="1280" />
+<iframe src="https://codepen.io/pen?template=awvMgv&editors=1010" height="540" width="1280" />
 
 ----
 
@@ -226,7 +226,7 @@ $('input:checkbox')     // Select checkbox elements
 
 ### Form Filters
 
-<iframe src="https://codepen.io/pen?template=awvMgv" height="540" width="1280" />
+<iframe src="https://codepen.io/pen?template=awvMgv&editors=1010" height="540" width="1280" />
 
 ----
 
@@ -282,7 +282,7 @@ https://rebrand.ly/web101
 
 ## Event examples
 
-<iframe src="https://codepen.io/pen?template=XgmGeQ" width="1280" height="540" />
+<iframe src="https://codepen.io/pen?template=XgmGeQ&editors=1010" width="1280" height="540" />
 
 
 ----
@@ -367,8 +367,8 @@ alert(`${firstName} ${lastName}, the meaning of life is ${mol}`);
 <div id="output"></div>
 ```
 ```javascript
-$('#code-editor').on('click', function() {
-    var html = $('#code-editor').html();
+$('#run-code').on('click', function() {
+    var html = $('#code-editor').val();
 
     $('#output').html(html);
 });
@@ -430,7 +430,7 @@ https://rebrand.ly/web101
 
 ## Basic Effects
 
-<iframe src="https://codepen.io/pen" height="540" width="1280" />
+<iframe src="https://codepen.io/pen?template=XgmGeQ&editors=1010" width="1280" height="540" />
 
 ----
 
@@ -444,7 +444,7 @@ https://rebrand.ly/web101
 
 ## Fading
 
-<iframe src="https://codepen.io/pen" width="1280" height="540" />
+<iframe src="https://codepen.io/pen?template=XgmGeQ&editors=1010" width="1280" height="540" />
 
 ----
 
@@ -459,7 +459,7 @@ https://rebrand.ly/web101
 
 ## Sliding
 
-<iframe src="https://codepen.io/pen" width="1280" height="540" />
+<iframe src="https://codepen.io/pen?template=XgmGeQ&editors=1010" width="1280" height="540" />
 
 ----
 
