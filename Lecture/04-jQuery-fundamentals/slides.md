@@ -23,9 +23,9 @@ highlightTheme: atom-one-dark
 - **What is jQuery?**
 - Selecting Elements
 - Handling Events
-- Chaining
 - DOM Manipulation
 - Effects
+- Chaining
 - AJAX
 - Project: Astro Weight Calculator
 
@@ -91,9 +91,9 @@ $('p').fadeIn();
 - **What is jQuery?**
 - **Selecting Elements**
 - Handling Events
-- Chaining
 - DOM Manipulation
 - Effects
+- Chaining
 - AJAX
 - Project: Astro Weight Calculator
 
@@ -186,6 +186,12 @@ $('ul > li:last-child');
 
 ----
 
+### Selection Filters
+
+<iframe src="https://codepen.io/pen?template=xrwezr" width="1280" height="540" />
+
+----
+
 ### Attribute Filters
 
 > Used to select elements in the DOM based on their attributes. (Usually to grab inputs by their name)
@@ -237,15 +243,159 @@ https://rebrand.ly/web101
 - **What is jQuery?**
 - **Selecting Elements**
 - **Handling Events**
-- Chaining
 - DOM Manipulation
 - Effects
+- Chaining
 - AJAX
 - Project: Astro Weight Calculator
 
 ----
 
 ## Handling Events
+
+- What is an event?
+- Event examples
+
+----
+
+## What is an event?
+
+- Every HTML element is capable of emitting events.
+
+- All elements are capable of emitting the `click` event.
+
+- You can use jQuery to run a function when a event is emitted for a specific event.
+
+----
+
+## Event examples
+
+- Click
+- Change
+- Focus
+- Blur
+- Keydown
+- Ready
+- Load
+
+----
+
+## Event examples
+
+<iframe src="https://codepen.io/pen?template=XgmGeQ" width="1280" height="540" />
+
+
+----
+
+### Exercises (15 minutes)
+
+Complete all exercises beginning with **Events**.
+
+https://rebrand.ly/web101
+
+---
+
+
+# Topics
+
+- **What is jQuery?**
+- **Selecting Elements**
+- **Handling Events**
+- **DOM Manipulation**
+- Effects
+- Chaining
+- AJAX
+- Project: Astro Weight Calculator
+
+----
+
+## DOM Manipulation
+
+- Creating Elements
+- Reading Elements
+- Updating Elements
+- Deleting Elements
+
+----
+
+### Creating Elements
+
+```html
+<ul id="todo-list"></ul>
+```
+```javascript
+// Create a list item element
+var $newMovie = $('<li>The Dark Knight</li>');
+
+// Add the list item to the end of the list
+$('#todo-list').append($newMovie);
+
+// Add another list item to the beginning of the list
+$('#todo-list').prepend('<li>Dr Dolittle</li>');
+```
+```html
+<ul id="todo-list">
+    <li>Dr Dolittle</li>
+    <li>The Dark Knight</li>
+</ul>
+```
+
+----
+
+### Reading Elements
+
+```html
+<input type="text" name="firstName" />
+<input type="text" name="lastName" />
+<p>42</p>
+```
+```javascript
+var firstName = $('input[name=firstName]').val();
+var lastName = $('input[name=lastName]').val();
+var mol = $('p').text();
+
+alert(`${firstName} ${lastName}, the meaning of life is ${mol}`);
+```
+
+----
+
+### Updating Elements
+
+```html
+<textarea id="code-editor" placeholder="Enter your HTML" />
+<button id="run-code">Run Code</button>
+<div id="output"></div>
+```
+```javascript
+$('#code-editor').on('click', function() {
+    var html = $('#code-editor').html();
+
+    $('#output').html(html);
+});
+```
+
+----
+
+### Deleting Elements
+
+```html
+<ul>
+    <li>Shawshank Redemption</li>
+    <li>Man of Steel (2013)</li>
+    <li>The Dark Knight</li>
+</ul>
+```
+```javascript
+$('ul > li:eq(2)').remove(); // because it's an awful movie.
+```
+
+----
+
+### Exercises (15 minutes)
+
+Complete all exercises beginning with **DOM**.
+
+https://rebrand.ly/web101
 
 ---
 
@@ -254,9 +404,81 @@ https://rebrand.ly/web101
 - **What is jQuery?**
 - **Selecting Elements**
 - **Handling Events**
+- **DOM Manipulation**
+- **Effects**
+- Chaining
+- AJAX
+- Project: Astro Weight Calculator
+
+----
+
+## Effects
+
+- Basic Effects
+- Fading
+- Sliding
+
+----
+
+## Basic Effects
+
+- hide
+- show
+- toggle
+
+----
+
+## Basic Effects
+
+<iframe src="https://codepen.io/pen" height="540" width="1280" />
+
+----
+
+## Fading
+
+- fadeIn
+- fadeOut
+- fadeToggle
+
+----
+
+## Fading
+
+<iframe src="https://codepen.io/pen" width="1280" height="540" />
+
+----
+
+## Sliding
+
+- slideIn
+- slideOut
+- slideToggle
+- delay
+
+----
+
+## Sliding
+
+<iframe src="https://codepen.io/pen" width="1280" height="540" />
+
+----
+
+### Exercises (15 minutes)
+
+Complete all exercises beginning with **Events**.
+
+https://rebrand.ly/web101
+
+---
+
+# Topics
+
+- **What is jQuery?**
+- **Selecting Elements**
+- **Handling Events**
+- **DOM Manipulation**
+- **Effects**
 - **Chaining**
-- DOM Manipulation
-- Effects
 - AJAX
 - Project: Astro Weight Calculator
 
@@ -271,43 +493,9 @@ https://rebrand.ly/web101
 - **What is jQuery?**
 - **Selecting Elements**
 - **Handling Events**
-- **Chaining**
-- **DOM Manipulation**
-- Effects
-- AJAX
-- Project: Astro Weight Calculator
-
-----
-
-## DOM Manipulation
-
----
-
-# Topics
-
-- **What is jQuery?**
-- **Selecting Elements**
-- **Handling Events**
-- **Chaining**
 - **DOM Manipulation**
 - **Effects**
-- AJAX
-- Project: Astro Weight Calculator
-
-----
-
-## Effects
-
----
-
-# Topics
-
-- **What is jQuery?**
-- **Selecting Elements**
-- **Handling Events**
 - **Chaining**
-- **DOM Manipulation**
-- **Effects**
 - **AJAX**
 - Project: Astro Weight Calculator
 
