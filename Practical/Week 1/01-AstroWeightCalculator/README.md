@@ -88,7 +88,7 @@ Ok, let's switch gears for a moment and open up `index.js`.
 Use this code as your starting point:
 
 ```js
-$(document).on('ready', function() {
+$(document).ready(function() {
   // your code goes here
 });
 ```
