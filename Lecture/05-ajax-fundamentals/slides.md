@@ -1,3 +1,7 @@
+---
+theme: white
+---
+
 # AJAX
 
 ---
