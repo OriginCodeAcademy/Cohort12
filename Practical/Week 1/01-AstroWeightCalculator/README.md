@@ -88,7 +88,7 @@ Ok, let's switch gears for a moment and open up `index.js`.
 Use this code as your starting point:
 
 ```js
-$(document).on('ready', function() {
+$(document).ready(function() {
   // your code goes here
 });
 ```
@@ -238,7 +238,7 @@ Once the repository is created, open up a terminal and navigate to your project 
 
 ![](http://i.imgur.com/XKrIcoj.png)
 
-Finally, create an issue in GitHub to let your instructor know that you've finished by [clicking here](https://www.github.com/OriginCodeAcademy/Cohort12/issues/new?title=Astro%20Weight%20Calculator&body=1.%20Where%20can%20I%20find%20your%20repository%3F%20(Paste%20a%20link%20below)%0A%0A2.%20How%20difficult%20did%20you%20find%20this%20project%3F%20(1-10)%0A%0A3.%20What%20was%20the%20best%20thing%20you%20learned%20in%20this%20project%3F%0A%0A4.%20Did%20you%20run%20into%20any%20trouble%20using%20the%20%60oca-cli%60%20tool%3F).
+Finally, create an issue in GitHub to let your instructor know that you've finished by [clicking here](https://www.github.com/OriginCodeAcademy/Cohort12/issues/new?title=Astro%20Weight%20Calculator&body=1.%20Where%20can%20I%20find%20your%20repository%3F%20(Paste%20a%20link%20below)%0A%0A2.%20How%20difficult%20did%20you%20find%20this%20project%3F%20(1-10)%0A%0A3.%20What%20was%20the%20best%20thing%20you%20learned%20in%20this%20project%3F%0A%0A).
 
 ### Celebrate!
 
