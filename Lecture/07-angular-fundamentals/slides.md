@@ -62,10 +62,17 @@
 
 ---
 
+## Sitenote: Maintainability
+
+* You will learn how to write unit tests.
+* First, let's get familiar with what it is we're testing :o)
+
+---
+
 ## What is AngularJS?
 
-* An **MV* framework** to help build maintainable web applications.
-* MV* is a design pattern
+* A **framework** to help build robust web applications.
+* Adheres to the **MV* Design Pattern**
 * Supported by Google and a dedicated open-source community.
 * The term “Angular” comes from the angles – ”<“ and “>” – found in HTML tags.
 
@@ -126,7 +133,7 @@
 
 ---
 
-# Let's learn some AngularJS!
+# Quick break (10 minutes)
 
 ---
 
@@ -174,7 +181,7 @@
 
 * Modules are the foundation of an AngularJS web application.
 
-* You can't do much without them, but they're necessary.
+* They help you organize your code like you would a toolshed.
 
 ![Modules](images/modules.png)
 

@@ -46,9 +46,9 @@ Most companies will offer one or more of these types of client applications to h
 
 ### Frontend vs Backend
 
-- Both "frontend" and "backend" are abstract categories for different types of development.
-- Vague terms scientifically, helpful for team communication.
-- Frontend: Software that users visually see and interact with
+- "Frontend" and "Backend": Abstract categories of development.
+- Aids in task delegation.
+- Frontend: Software that users visually see and interact with.
 - Backend: Software that powers frontend software behind the scenes.
 
 ----
