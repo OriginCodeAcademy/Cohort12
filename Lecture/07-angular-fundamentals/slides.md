@@ -1,4 +1,19 @@
-# AngularJS
+---
+theme: white
+highlightTheme: arta
+revealOptions:
+    transition: 'fade'
+---
+
+<style>
+* {
+  font-size: 112% !important;
+}
+</style>
+
+<img src="http://paislee.io/content/images/2014/Aug/angular_js.svg" style="border: 0; box-shadow: none" height="300" />
+
+### ANG100 - Intro to Angular
 
 ---
 
@@ -12,7 +27,7 @@
 
 ## Why use AngularJS?
 
-* Software Development is mostly _maintenance_. (60/40)
+* Software Development is mostly _maintenance_. (70/30)
 * Libraries: Code is free to roam. (10 projects, 10 strategies)
 * Framework: Code is organized. (10 projects, 1 strategy)
 * AngularJS is a framework. Easy to maintain multiple projects.
