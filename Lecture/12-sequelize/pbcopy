@@ -1,0 +1,204 @@
+# ForeverNote
+
+An Evernote clone written in MySQL, Express, Node and AngularJS.
+
+## Steps
+
+```sh
+# Initialize an empty git repository
+$ git init
+
+# Create a new yarn/npm project
+$ npm init
+or
+$ yarn init
+```
+
+## Universal JS Application
+```
+app
+|_ client (angularjs, es5)
+|_ server (nodejs, es6)
+```
+
+# Build the app
+
+## Add .editorconfig
+```yaml
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+```
+
+## Add .gitignore
+[Get Node .gitignore](https://github.com/github/gitignore)
+
+## Add dotenv
+```sh
+$ yarn add dotenv
+```
+
+```
+MYSQL_HOST=127.0.0.1
+MYSQL_USER=root
+MYSQL_PASSWORD=abokyu12
+MYSQL_DATABASE=forevernote
+```
+
+## Add `index.js`
+```sh
+$ touch index.js
+```
+
+```js
+require('dotenv').config();
+const server = require('./server/app');
+
+const port = process.env.PORT || 4000;
+
+server.listen(port, () => {
+  console.log(`Server is listening on port ${port}.`);
+});
+```
+
+## Add `/server/app.js`
+```sh
+$ touch server/app.js
+```
+
+```js
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+
+app.use(express.static(__dirname + '/../dist'));
+app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '../dist/index.html');
+});
+
+module.exports = app;
+```
+
+## What is Sequelize?
+- Explain ORMS on Whiteboard
+
+## Run sequelize init
+```sh
+$ npm install sequelize-cli -g
+```
+
+## `server/config/config.js`
+```js
+const options = {
+    "username": process.env.MYSQL_USER || 'root',
+    "password": process.env.MYSQL_PASSWORD || 'abokyu12',
+    "database": process.env.MYSQL_DATABASE || 'forevernote',
+    "host": process.env.MYSQL_HOST || 'localhost',
+    "dialect": "mysql"
+  };
+
+module.exports = {
+  "development": options,
+  "test": options,
+  "Ïproduction": options
+};
+```
+
+## `server/models/index.js`
+```sh
+$ mkdir server/models
+$ touch server/models/index.js
+```
+
+```js
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize(
+  process.env.MYSQL_DATABASE,
+  process.env.MYSQL_USER,
+  process.env.MYSQL_PASSWORD,
+  {
+    dialect: 'mysql',
+    host: process.env.MYSQL_HOST
+  }
+);
+
+let db = {};
+
+db.notes = sequelize.import('./note.model.js');
+
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+module.exports = db;
+```
+
+## `server/models/note.js`
+
+```sh
+$ touch server/models/note.js
+```
+
+```js
+module.exports = function(sequelize, DataTypes) {
+
+  //http://docs.sequelizejs.com/manual/tutorial/models-definition.html#data-types
+  const Note = sequelize.define('note', {
+    title: DataTypes.STRING,       
+    content: DataTypes.TEXT,
+    created: DataTypes.DATE
+  });
+
+  return Note;
+
+};
+```
+
+## Run Sequelize Migrations
+
+```sh
+$ sequelize migration:create
+```
+
+```js
+'use strict';
+
+module.exports = {
+  up: function (queryInterface, Sequelize) {
+    return queryInterface
+      .createTable('note',
+      {
+        id: {
+          type: Sequelize.INTEGER,
+          primaryKey: true,
+          autoIncrement: true
+        },
+        title: Sequelize.STRING,
+        content: Sequelize.TEXT
+      }
+    );
+  },
+
+  down: function (queryInterface, Sequelize) {
+   return queryInterface.dropAllTables();
+  }
+};
+```
+
+```sh
+$ sequelize db:migrate
+$ sequelize db:migrate:undo
+```
+
+## (Work on that)
+
+## Routes
+
